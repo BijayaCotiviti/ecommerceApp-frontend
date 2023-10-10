@@ -1,0 +1,37 @@
+<!-- Hero Section -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Welcome to E-Commerce Store</h1>
+            <p>Discover the best deals on a wide range of products.</p>
+            <a href="#" class="btn btn-primary" routerLink="products">Shop Now</a>
+        </div>
+        <div class="col-md-6">
+            <!-- You can add an image or carousel here -->
+        </div>
+    </div>
+</div>
+
+<!-- Featured Products -->
+<div class="container mt-4">
+    <h2>Featured Products</h2>
+    <div class="row">
+        <!-- Sample product cards, you can add more -->
+        <div class="col-md-4 mb-3" *ngFor="let product of products">
+            <div class="card">
+                <img [src]="product.productUrl" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text">${{product.price}}</p>
+                    <a (click)="addToCart(product)" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-light text-center py-3">
+    <p>&copy; 2023 DRJ Store</p>
+</footer>
+
